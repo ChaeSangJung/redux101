@@ -39,3 +39,18 @@
 ##2 PURE REDUX: TO DO LIST
 
 ### MUTATE STATE 절대 NEVER 쓰지 말것!!
+
+### [redux three principles](https://redux.js.org/understanding/thinking-in-redux/three-principles)
+- state
+  - single source of truth
+  - read only
+  - state를 수정할 수 있는 방법 : action을 보낸다.
+  - state를 mutate(변형)하면 안됨 : 절대
+    - 대신에 new state objects를 return (새로운 object를 return)
+    - friends.push("XXX") -(X), return [...state, {text: action.text}] - (O)
+
+### delete element from array
+- filter() : create a new array
+
+### ⭐ 새로운 state를 만들어서 return ⭐
+
