@@ -1,6 +1,6 @@
 # 초보자를 위한 리덕스 101
 
-##1 PURE REDUX: COUNTER
+## 1 PURE REDUX: COUNTER
 
 ### redux
 
@@ -36,7 +36,7 @@
 
 
 
-##2 PURE REDUX: TO DO LIST
+## 2 PURE REDUX: TO DO LIST
 
 ### MUTATE STATE 절대 NEVER 쓰지 말것!!
 
