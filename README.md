@@ -87,3 +87,15 @@
   );
   ```
 
+### 3.2 mapStateToProps
+- store.getState();
+  - 현재의 state를 전달
+- connect
+  - components를 store에 연결
+  - connect : 2개의 arguments
+    - state 또는 dispatch
+- [view more](https://react-redux.js.org/using-react-redux/connect-mapstate)
+
+
+
+
