@@ -54,3 +54,20 @@
 
 ### ⭐ 새로운 state를 만들어서 return ⭐
 
+### action creator 는 object만 return
+ ``` javascript
+  const addTodo = (text) => {
+    return {
+      type: ADD_TODO, 
+      text: text
+    }
+  }
+
+  const deleteTodo = (id) => {
+    return {
+      type: DELETE_TODO,
+      id: id
+    }
+  }
+  ```
+

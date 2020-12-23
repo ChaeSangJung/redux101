@@ -27,7 +27,8 @@ const reducer = (state=[], action) => {
       return [{text: action.text, id: Date.now()}, ...state];
       // return state.push(action.text); 안된다. 새로운 object를 만들어서 return을 해야 한다.
     case DELETE_TODO:
-      return state.filter(toDo => toDo.id !== action.id);
+      const cleaned = state.filter(toDo => toDo.id !== action.id);
+      return cleaned;
     default:
       return state;
   }
