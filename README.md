@@ -46,7 +46,7 @@
   - read only
   - state를 수정할 수 있는 방법 : action을 보낸다.
   - state를 mutate(변형)하면 안됨 : 절대
-    - 대신에 new state objects를 return (새로운 object를 return)
+    - 대신에 new state objects를 return (새로운 object를 return), (새로운 state를 create하고 그 새로운 state를 return)
     - friends.push("XXX") -(X), return [...state, {text: action.text}] - (O)
 
 ### delete element from array

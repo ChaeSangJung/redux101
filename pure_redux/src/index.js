@@ -10,7 +10,8 @@ const reducer = (state=[], action) => {
   console.log(action);
   switch(action.type){
     case ADD_TODO:
-      return [];
+      return [...state, {text: action.text, id: Date.now()}];
+      // return state.push(action.text); 안된다. 새로운 object를 만들어서 return을 해야 한다.
     case DELETE_TODO:
       return [];
     default:
@@ -19,6 +20,10 @@ const reducer = (state=[], action) => {
 }
 
 const stroe = createStore(reducer);
+
+stroe.subscribe(() => {
+  console.log(stroe.getState());
+});
 
 // const createToDo = toDo => {
 //   const li = document.createElement("li");
