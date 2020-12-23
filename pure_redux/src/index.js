@@ -27,7 +27,7 @@ const reducer = (state=[], action) => {
       return [{text: action.text, id: Date.now()}, ...state];
       // return state.push(action.text); 안된다. 새로운 object를 만들어서 return을 해야 한다.
     case DELETE_TODO:
-      return [];
+      return state.filter(toDo => toDo.id !== action.id);
     default:
       return state;
   }
@@ -44,7 +44,7 @@ const dispatchAddToDo = text => {
 }
 
 const dispatchDeleteToDo = (event) => {
-  const id = event.target.parentNode.id;
+  const id = parseInt(event.target.parentNode.id);
   console.log("delete", id);
   store.dispatch(deleteTodo(id));
 }
