@@ -4,14 +4,14 @@ const ADD = "ADD";
 const DELETE = "DELETE";
 
 // action creater
-export const addTodo = (text) => {
+const addTodo = (text) => {
     return {
         type: ADD,
         text: text
     };
 };
 
-export const deleteTodo = (id) => {
+const deleteTodo = (id) => {
     return {
         type: DELETE,
         id: id
@@ -30,5 +30,10 @@ const reducer = (state=[], action) => {
 }
 
 const store = createStore(reducer);
+
+export const actionCreators = {
+    addTodo,
+    deleteTodo    
+}
 
 export default store;
