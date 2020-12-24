@@ -14,7 +14,7 @@ const addTodo = (text) => {
 const deleteTodo = (id) => {
     return {
         type: DELETE,
-        id: id
+        id: parseInt(id)
     };
 };
 
@@ -33,7 +33,7 @@ const store = createStore(reducer);
 
 export const actionCreators = {
     addTodo,
-    deleteTodo    
+    deleteTodo
 }
 
 export default store;
